@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Hackathon_Team1-Android</string>
-<!--    fragment_main-->
+    <!--fragment_main-->
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_search">search</string>
@@ -25,7 +25,7 @@
     <string name="restaurant_info" translatable="false">육류를 활용한 다양한 메뉴와 한우 투뿔 구이세트가 있는 맡김차림.</string>
     <string name="price_lunch" translatable="false">점심 00만원</string>
     <string name="price_dinner" translatable="false">저녁 00만원</string>
-    <string name="default_date" translatable="false">내일 (ㅇ) / 0명</string>
+    <string name="default_date" translatable="false">내일 (수) / 0명</string>
     <string name="bookmarkedNum" translatable="false">1,000</string>
 
     <!-- fragment_reserve01.xml-->
