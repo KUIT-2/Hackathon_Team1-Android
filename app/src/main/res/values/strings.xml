@@ -3,6 +3,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--activity_restaurant.xml-->
+    <string name="rating" translatable="false">4.3</string>
+    <string name="reviewNum" translatable="false">00개 리뷰 ></string>
+    <string name="restaurant_info" translatable="false">육류를 활용한 다양한 메뉴와 한우 투뿔 구이세트가 있는 맡김차림.</string>
+    <string name="price_lunch" translatable="false">점심 00만원</string>
+    <string name="price_dinner" translatable="false">저녁 00만원</string>
+    <string name="default_date" translatable="false">내일 (ㅇ) / 0명</string>
+    <string name="bookmarkedNum" translatable="false">1,000</string>
+
     <!-- fragment_reserve01.xml-->
     <string name="today" translatable="false"><u>오늘</u></string>
 
