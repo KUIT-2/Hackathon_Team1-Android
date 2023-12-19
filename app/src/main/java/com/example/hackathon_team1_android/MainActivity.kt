@@ -7,9 +7,11 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.hackathon_team1_android.dao.CategorizeView
+import com.example.hackathon_team1_android.dao.getRestaurantService
 import com.example.hackathon_team1_android.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CategorizeView {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -33,5 +35,15 @@ class MainActivity : AppCompatActivity() {
         //바텀 네비게이션을 상단바에도 만들어주는 코드(지우는것이 나음)
         navView.setupWithNavController(navController)
 
+    }
+
+    override fun CategorizeSuccess() {
+        TODO("Not yet implemented")
+        //임시로 오버라이드 해놓은 것.
+    }
+
+    override fun CategorizeFailure(code: Int, msg: String) {
+        TODO("Not yet implemented")
+        //임시로 오버라이드 해놓은 것.
     }
 }
