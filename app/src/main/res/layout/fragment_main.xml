@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/mainA_ll_top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/mainA_ll_iv_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:src="@drawable/logo"
+
+            />
+
+        <EditText
+            android:id="@+id/mainA_ll_et_search_rectangle"
+            android:layout_width="214dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+
+            android:background="@drawable/rectangle_mainactivity_search" />
+
+        <ImageView
+            android:id="@+id/mainA_ll_iv_headerMark"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/header_mark" />
+
+        <ImageView
+            android:id="@+id/mainA_ll_iv_alarm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/alarm_new_on" />
+    </LinearLayout>
+
+    <!--    <View-->
+    <!--        android:id="@+id/mainA_view_line"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/mainA_ll_top_app_bar" />-->
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp">-->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainA_vp2"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainA_ll_top_app_bar"
+
+        />
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/mainA_circleIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:ci_drawable="@drawable/white_circle"
+        app:ci_drawable_unselected="@drawable/gray_circle"
+        app:layout_constraintBottom_toBottomOf="@id/mainA_vp2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainA_cl_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainA_vp2">
+
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu1"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/sushi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/detail1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu1" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu2"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/wumakase"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu1"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/detail2"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu1"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu2" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu3"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/holidaylocation"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/detail3"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu2"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu3"
+
+            />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu4"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/holidaysearch"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+
+            android:text="@string/detail4"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu3"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu4" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu5"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/reservation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/detail5"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu4"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu5" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu6"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/holiday"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mainA_tv_detailMenu1" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/detail6"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu6" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu7"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/guide"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu6"
+            app:layout_constraintTop_toTopOf="@id/mainA_tv_detailMenu2" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+
+            android:text="@string/detail7"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu6"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu7" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu8"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/sale"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu7"
+            app:layout_constraintTop_toTopOf="@id/mainA_tv_detailMenu3" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+
+            android:text="@string/detail8"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu7"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu8" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu9"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/vipcrown"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu8"
+            app:layout_constraintTop_toTopOf="@id/mainA_tv_detailMenu4" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+
+            android:text="@string/detail9"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu8"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu9" />
+
+        <ImageView
+            android:id="@+id/mainA_iv_detailMenu10"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gray_rectangle"
+            android:src="@drawable/goodview"
+            app:layout_constraintStart_toEndOf="@id/mainA_iv_detailMenu9"
+            app:layout_constraintTop_toTopOf="@id/mainA_tv_detailMenu5" />
+
+        <TextView
+            android:id="@+id/mainA_tv_detailMenu10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:text="@string/detail10"
+            app:layout_constraintStart_toEndOf="@+id/mainA_tv_detailMenu9"
+            app:layout_constraintTop_toBottomOf="@id/mainA_iv_detailMenu10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/mainA_tv_locationSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="어디로 가시나요?"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainA_cl_details" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainA_tv_locationSearch">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/orange_circle_52dp" />
+
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/_706apgujeong"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="압구정"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_706itaewon"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="이태원"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/busan_"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="부산"
+            android:textColor="@color/white"
+
+            />
+
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_706sungsoo"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="성수"
+            android:textColor="@color/white"
+
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
