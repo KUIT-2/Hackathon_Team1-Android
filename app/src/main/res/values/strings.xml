@@ -19,9 +19,6 @@
     <string name="detail9">VIP추천</string>
     <string name="detail10">뷰맛집</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <!--activity_restaurant.xml-->
     <string name="rating" translatable="false">4.3</string>
     <string name="reviewNum" translatable="false">00개 리뷰 ></string>

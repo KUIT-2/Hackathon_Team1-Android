@@ -1,18 +1,18 @@
 package com.example.hackathon_team1_android.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.hackathon_team1_android.HomeBannerAdapter
 import com.example.hackathon_team1_android.R
-import com.example.hackathon_team1_android.databinding.FragmentHomeBinding
+import com.example.hackathon_team1_android.RestaurantListActivity
+import com.example.hackathon_team1_android.databinding.FragmentMainBinding
 
-class HomeFragment : Fragment() {
-    lateinit var binding: FragmentHomeBinding
+class MainFragment : Fragment() {
+    lateinit var binding: FragmentMainBinding
 
     val imageArray = listOf(
         R.drawable.banner1,
@@ -27,11 +27,17 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentMainBinding.inflate(layoutInflater)
 
         initViewPager()
 
+        binding.mainAIvDetailMenu2.setOnClickListener {
+            val intent = Intent(requireContext(), RestaurantListActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
+
     }
 
     private fun initViewPager() {

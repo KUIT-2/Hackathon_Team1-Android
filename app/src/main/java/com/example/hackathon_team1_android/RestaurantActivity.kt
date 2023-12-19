@@ -1,5 +1,6 @@
 package com.example.hackathon_team1_android
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.hackathon_team1_android.databinding.ActivityRestaurantBinding
@@ -15,11 +16,28 @@ class RestaurantActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.stuffABtnBack.setOnClickListener {
+            finish()
+        }
+
         binding.restaurantABtnDate.setOnClickListener {
             //frament_reserve01.xml 하단에 뜨는 부분 구현해야 함
             val reserveFragment = Reserve01Fragment()
             reserveFragment.show(supportFragmentManager, reserveFragment.tag)
         }
+
+        // RestaurantListActivity에서 intent로 정보 받아오기
+        val data = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getSerializableExtra("Key", DataRestaurant::class.java)
+        } else {
+            intent.getSerializableExtra("Key") as DataRestaurant
+        } ?: DataRestaurant("temp", "temp", "temp", "temp")
+
+        // intent에 담긴 정보 받아와서 화면에 반영
+        binding.restaurantATvTitle.text = data.title
+        binding.restaurantATvInfo.text = data.info
+        binding.restaurantATvCategory.text = data.category
+        binding.restaurantATvLocation.text = data.location
 
         initView()
     }
