@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:background="@drawable/white_bottom_sheet_corner_24dp"
+    app:layout_behavior="bottom">
+
+    <TextView
+        android:id="@+id/reserve02F_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="방문이 맞으신가요?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/reserve02F_progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve02F_tv_title" />
+
+    <TextView
+        android:id="@+id/reserve02F_tv_explain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="방문 일정을 다시 한번 확인해 주세요."
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reserve02F_progressBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reserve02F_view_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rectangle_corner_12dp_lightgray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve02F_tv_explain1">
+
+        <TextView
+            android:id="@+id/reserve02F_tv_restaurant_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurant_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/reserve02F_ll_restaurant_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/reserve02F_ll_restaurant_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/reserve02F_ll_reserve_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reserve02F_tv_restaurant_title">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant_location"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" • "
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant_category"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reserve02F_ll_reserve_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reserve02F_ll_restaurant_info">
+
+            <!--reserve_date-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserve_date"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--reserve_time-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="4dp"
+                    android:src="@drawable/time_sm_b" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserve_time"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--reserve_person-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/people_new" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserve_person"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/reserve02F_tv_explain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="당일취소 및 노쇼는 레스토랑뿐만 아니라 다른 고객님께도 피해가 될 수 있으므로 신중히 예약 부탁드립니다 :)"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve02F_view_restaurant" />
+
+    <android.widget.Button
+        android:id="@+id/reserve02F_btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_corner_12dp_gray"
+        android:text="취소"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/reserve02F_view_space"
+        app:layout_constraintStart_toStartOf="@id/reserve02F_view_restaurant"
+        app:layout_constraintTop_toBottomOf="@id/reserve02F_tv_explain2" />
+
+    <View
+        android:id="@+id/reserve02F_view_space"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/reserve02F_btn_cancel"
+        app:layout_constraintEnd_toStartOf="@id/reserve02F_btn_ok"
+        app:layout_constraintStart_toEndOf="@id/reserve02F_btn_cancel"
+        app:layout_constraintTop_toTopOf="@id/reserve02F_btn_cancel" />
+
+    <android.widget.Button
+        android:id="@+id/reserve02F_btn_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_corner_12dp_filled_orange"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/reserve02F_view_restaurant"
+        app:layout_constraintStart_toEndOf="@id/reserve02F_view_space"
+        app:layout_constraintTop_toBottomOf="@id/reserve02F_tv_explain2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

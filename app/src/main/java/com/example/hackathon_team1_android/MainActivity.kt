@@ -32,5 +32,6 @@ class MainActivity : AppCompatActivity() {
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         //바텀 네비게이션을 상단바에도 만들어주는 코드(지우는것이 나음)
         navView.setupWithNavController(navController)
+
     }
 }

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Hackathon_Team1-Android</string>
+
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_search">search</string>
@@ -17,5 +18,53 @@
     <string name="detail8">이달의할인</string>
     <string name="detail9">VIP추천</string>
     <string name="detail10">뷰맛집</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--activity_restaurant.xml-->
+    <string name="rating" translatable="false">4.3</string>
+    <string name="reviewNum" translatable="false">00개 리뷰 ></string>
+    <string name="restaurant_info" translatable="false">육류를 활용한 다양한 메뉴와 한우 투뿔 구이세트가 있는 맡김차림.</string>
+    <string name="price_lunch" translatable="false">점심 00만원</string>
+    <string name="price_dinner" translatable="false">저녁 00만원</string>
+    <string name="default_date" translatable="false">내일 (ㅇ) / 0명</string>
+    <string name="bookmarkedNum" translatable="false">1,000</string>
+
+    <!-- fragment_reserve01.xml-->
+    <string name="today" translatable="false"><u>오늘</u></string>
+
+    <string-array name="week_label">
+        <item>월</item>
+        <item>화</item>
+        <item>수</item>
+        <item>목</item>
+        <item>금</item>
+        <item>토</item>
+        <item>일</item>
+    </string-array>
+
+    <string-array name="month_label">
+        <item>1월</item>
+        <item>2월</item>
+        <item>3월</item>
+        <item>4월</item>
+        <item>5월</item>
+        <item>6월</item>
+        <item>7월</item>
+        <item>8월</item>
+        <item>9월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+
+    <!-- fragment_reserve02.xml-->
+    <string name="restaurant_title" translatable="false">소우나인</string>
+    <string name="restaurant_location" translatable="false">삼성</string>
+    <string name="restaurant_category" translatable="false">한우오마카세</string>
+    <string name="reserve_date" translatable="false">12.19(화)</string>
+    <string name="reserve_time" translatable="false">오후 6:00</string>
+    <string name="reserve_person" translatable="false">2명</string>
 
 </resources>

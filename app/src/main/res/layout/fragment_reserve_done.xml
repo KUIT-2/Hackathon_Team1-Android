@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/white_bottom_sheet_corner_24dp"
+    android:padding="20dp"
+    app:layout_behavior="bottom">
+
+    <TextView
+        android:id="@+id/reserveDoneF_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="예약이 완료되었습니다."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/reserveDoneF_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserveDoneF_tv_title" />
+
+    <LinearLayout
+        android:id="@+id/reserveDoneF_ll_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/reserveDoneF_line"
+        app:layout_constraintTop_toBottomOf="@id/reserveDoneF_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="레스토랑"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurant_title"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reserveDoneF_ll_reserveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/reserveDoneF_line"
+        app:layout_constraintTop_toBottomOf="@id/reserveDoneF_ll_restaurant">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="예약일시"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OO.OO(O) OO O:OO O명"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/reserveDoneF_btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_corner_12dp_gray"
+        android:text="메인으로 가기"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reserveDoneF_view_space"
+        app:layout_constraintStart_toStartOf="@id/reserveDoneF_line"
+        app:layout_constraintTop_toBottomOf="@id/reserveDoneF_ll_reserveTime" />
+
+    <View
+        android:id="@+id/reserveDoneF_view_space"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/reserveDoneF_btn_cancel"
+        app:layout_constraintEnd_toStartOf="@id/reserveDoneF_btn_ok"
+        app:layout_constraintStart_toEndOf="@id/reserveDoneF_btn_cancel"
+        app:layout_constraintTop_toTopOf="@id/reserveDoneF_btn_cancel" />
+
+    <android.widget.Button
+        android:id="@+id/reserveDoneF_btn_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_corner_12dp_filled_orange"
+        android:text="예약내역 확인"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/reserveDoneF_line"
+        app:layout_constraintStart_toEndOf="@id/reserveDoneF_view_space"
+        app:layout_constraintTop_toBottomOf="@id/reserveDoneF_ll_reserveTime" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
