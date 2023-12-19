@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.hackathon_team1_android.databinding.ActivityRestaurantBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 
 class RestaurantActivity : AppCompatActivity() {
     lateinit var binding: ActivityRestaurantBinding
@@ -21,7 +22,7 @@ class RestaurantActivity : AppCompatActivity() {
         }
 
         binding.restaurantABtnDate.setOnClickListener {
-            //frament_reserve01.xml 하단에 뜨는 부분 구현해야 함
+            //frament_reserve01.xml 하단에 뜨는 부분 구현
             val reserveFragment = Reserve01Fragment()
             reserveFragment.show(supportFragmentManager, reserveFragment.tag)
         }
@@ -40,6 +41,23 @@ class RestaurantActivity : AppCompatActivity() {
         binding.restaurantATvLocation.text = data.location
 
         initView()
+    }
+
+    fun showReserve02Fragment(fragment: Reserve02Fragment) {
+        //frament_reserve02.xml 하단에 뜨는 부분 구현
+        fragment.show(supportFragmentManager, fragment.tag)
+    }
+
+    fun showReserveCheckFragment() {
+        //frament_reserve_check.xml 하단에 뜨는 부분 구현
+        val reserveFragment = ReserveCheckFragment()
+        reserveFragment.show(supportFragmentManager, reserveFragment.tag)
+    }
+
+    fun showReserveDoneFragment() {
+        //frament_reserve_done.xml 하단에 뜨는 부분 구현
+        val reserveFragment = ReserveDoneFragment()
+        reserveFragment.show(supportFragmentManager, reserveFragment.tag)
     }
 
     private fun initView() {

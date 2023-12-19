@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/white_bottom_sheet_corner_24dp"
-    android:padding="20dp"
-    app:layout_behavior="bottom">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/reserve01F_tv_today"
@@ -21,12 +20,12 @@
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/reserve01F_calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@id/reserve01F_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve01F_tv_today"
         app:mcv_monthLabels="@array/month_label"
         app:mcv_selectionColor="@color/orange"
         app:mcv_weekDayLabels="@array/week_label" />
@@ -44,22 +43,106 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:background="@color/orange"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/reserve01F_timeList"
         app:layout_constraintEnd_toEndOf="@id/reserve01F_line"
         app:layout_constraintStart_toStartOf="@id/reserve01F_line"
-        app:layout_constraintTop_toBottomOf="@id/reserve01F_line" />
+        app:layout_constraintTop_toBottomOf="@id/reserve01F_line">
 
-    <HorizontalScrollView
+        <RadioGroup
+            android:id="@+id/reserve01F_radiogroup_person"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="1명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="2명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="3명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="4명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="5명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="6명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="7명" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_selector_background_reserve01"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="8명" />
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reserve01F_timeList"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:background="@color/orange"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/reserve01F_btn_close"
         app:layout_constraintEnd_toEndOf="@id/reserve01F_line"
         app:layout_constraintStart_toStartOf="@id/reserve01F_line"
-        app:layout_constraintTop_toBottomOf="@id/reserve01F_personList" />
+        app:layout_constraintTop_toBottomOf="@id/reserve01F_personList"
+        tools:listitem="@layout/item_reserve_time_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <android.widget.Button
         android:id="@+id/reserve01F_btn_close"

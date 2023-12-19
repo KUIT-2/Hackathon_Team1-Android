@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".RestaurantActivity">
+    android:weightSum="10">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -374,10 +373,57 @@
                     android:id="@+id/restaurantA_timeList"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/orange"
+                    android:scrollbars="none"
                     app:layout_constraintBottom_toTopOf="@id/restaurantA_btn_reserve_date"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/restaurantA_btn_date" />
+                    app:layout_constraintTop_toBottomOf="@id/restaurantA_btn_date">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <android.widget.Button
+                            android:layout_width="90dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/rectangle_corner_12dp_filled_orange"
+                            android:text="오후 6:30"
+                            android:textColor="@color/white" />
+
+                        <android.widget.Button
+                            android:layout_width="90dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/rectangle_corner_12dp_filled_orange"
+                            android:text="오후 7:00"
+                            android:textColor="@color/white" />
+
+                        <android.widget.Button
+                            android:layout_width="90dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/rectangle_corner_12dp_filled_orange"
+                            android:text="오후 7:30"
+                            android:textColor="@color/white" />
+
+                        <android.widget.Button
+                            android:layout_width="90dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/rectangle_corner_12dp_filled_orange"
+                            android:text="오후 8:00"
+                            android:textColor="@color/white" />
+
+                        <android.widget.Button
+                            android:layout_width="90dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/rectangle_corner_12dp_filled_orange"
+                            android:text="오후 9:00"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
 
                 <android.widget.Button
                     android:id="@+id/restaurantA_btn_reserve_date"
@@ -431,7 +477,8 @@
         android:layout_height="100dp"
         android:layout_weight="3"
         android:background="@drawable/rectangle_corner_0dp_gray"
-        android:padding="10dp">
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
             android:id="@+id/restaurantA_img_bookmark"
@@ -469,4 +516,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
