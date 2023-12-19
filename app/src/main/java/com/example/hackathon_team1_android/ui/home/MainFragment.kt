@@ -3,16 +3,19 @@ package com.example.hackathon_team1_android.ui.home
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.hackathon_team1_android.HomeBannerAdapter
 import com.example.hackathon_team1_android.R
+import com.example.hackathon_team1_android.RestaurantListActivity
 import com.example.hackathon_team1_android.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     lateinit var binding: FragmentMainBinding
+
 
     //자동 전환을 위해 추가한 요소.
     var currentPosition = 0
@@ -41,6 +44,7 @@ class MainFragment : Fragment() {
         binding = FragmentMainBinding.inflate(layoutInflater)
 
         initViewPager()
+
 //자동 전환
         val thread = Thread(pagerRunnable())
         thread.start()
@@ -52,6 +56,14 @@ class MainFragment : Fragment() {
     val handler = Handler(Looper.getMainLooper()) {
         setPage()
         true
+
+        binding.mainAIvDetailMenu2.setOnClickListener {
+            val intent = Intent(requireContext(), RestaurantListActivity::class.java)
+            startActivity(intent)
+        }
+
+        return binding.root
+
     }
 
     private fun initViewPager() {
@@ -76,4 +88,5 @@ class MainFragment : Fragment() {
         }
 
     }
+
 }
