@@ -49,6 +49,12 @@ class MainFragment : Fragment() {
         val thread = Thread(pagerRunnable())
         thread.start()
         //자동전환
+
+        binding.mainAIvDetailMenu2.setOnClickListener {
+            val intent = Intent(requireContext(), RestaurantListActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 
@@ -57,12 +63,9 @@ class MainFragment : Fragment() {
         setPage()
         true
 
-        binding.mainAIvDetailMenu2.setOnClickListener {
-            val intent = Intent(requireContext(), RestaurantListActivity::class.java)
-            startActivity(intent)
-        }
 
-        return binding.root
+
+
 
     }
 
