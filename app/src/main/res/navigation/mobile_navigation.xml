@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.hackathon_team1_android.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.hackathon_team1_android.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_timeline"
+        android:name="com.example.hackathon_team1_android.ui.timeline.TimelineFragment"
+        android:label="@string/title_timeline"
+        tools:layout="@layout/fragment_timeline" />
+
+    <fragment
+        android:id="@+id/navigation_myDining"
+        android:name="com.example.hackathon_team1_android.ui.mydining.MyDiningFragment"
+        android:label="@string/title_myDining"
+        tools:layout="@layout/fragment_my_dining" />
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.hackathon_team1_android.ui.login.LoginFragment"
+        android:label="@string/title_myDining"
+        tools:layout="@layout/fragment_my_dining" />
+
+</navigation>

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Hackathon_Team1-Android</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">search</string>
+    <string name="title_timeline">timeline</string>
+    <string name="title_myDining">myDining</string>
+    <string name="title_login">login</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detail1">오마카세</string>
+    <string name="detail2">우마카세</string>
+    <string name="detail3">인기레스토랑</string>
+    <string name="detail4">데이트코스</string>
+    <string name="detail5">모임예약</string>
+    <string name="detail6">호텔레스토랑</string>
+    <string name="detail7">가이드선정</string>
+    <string name="detail8">이달의할인</string>
+    <string name="detail9">VIP추천</string>
+    <string name="detail10">뷰맛집</string>
+
 </resources>
