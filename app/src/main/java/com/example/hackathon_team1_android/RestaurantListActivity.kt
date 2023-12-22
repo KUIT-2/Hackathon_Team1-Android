@@ -3,8 +3,15 @@ package com.example.hackathon_team1_android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.hackathon_team1_android.dao.BaseResponse
+import com.example.hackathon_team1_android.dao.RestaurantInfo
+import com.example.hackathon_team1_android.dao.getRestaurantListResponse
 import com.example.hackathon_team1_android.databinding.ActivityRestaurantListBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RestaurantListActivity : AppCompatActivity() {
     lateinit var binding: ActivityRestaurantListBinding
@@ -26,18 +33,49 @@ class RestaurantListActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        restaurantAdapter = RestaurantAdatper(restaurantList)
+        restaurantAdapter = RestaurantAdatper(arrayListOf())
         binding.resListARecyclerView.adapter = restaurantAdapter
         binding.resListARecyclerView.layoutManager =
             LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
 
         restaurantAdapter!!.setOnItemClickListener(object : RestaurantAdatper.OnItemClickListener {
-            override fun onItemClick(res: DataRestaurant) {
+            override fun onItemClick(res: RestaurantInfo) {
                 val intent = Intent(applicationContext, RestaurantActivity::class.java)
                 intent.putExtra("Key", res)
                 startActivity(intent)
             }
         })
+
+
+
+        var CategoryService = ApplicationClass.retrofit.create(RestaurantCategories::class.java)
+        CategoryService.getRestaurant("oma", 1).enqueue(object :
+            Callback<BaseResponse<getRestaurantListResponse>> {
+            override fun onResponse(
+                call: Call<BaseResponse<getRestaurantListResponse>>,
+                response: Response<BaseResponse<getRestaurantListResponse>>
+            ) {
+
+                if(response.isSuccessful){
+                    val resp = response.body()
+                    Log.d("Categorize response", resp.toString())
+                    restaurantAdapter!!.setData(resp!!.result.restaurant_list)
+
+
+                }
+
+
+            }
+
+            override fun onFailure(
+                call: Call<BaseResponse<getRestaurantListResponse>>,
+                t: Throwable
+            ) {
+                Log.d("Categorize failed", t.toString())
+            }
+
+        })
+
     }
 
     private fun initRestaurants() {

@@ -11,7 +11,7 @@ import com.example.hackathon_team1_android.databinding.ItemHomeViewpager2Binding
 class HomeBannerAdapter(val context: Context, val images: List<Int>) :
     RecyclerView.Adapter<HomeBannerAdapter.ViewHolder>() {
 
-
+//뷰페이저 어댑터
     inner class ViewHolder(var binding: ItemHomeViewpager2Binding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(img: Int) {

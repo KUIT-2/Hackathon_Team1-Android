@@ -1,15 +1,23 @@
 package com.example.hackathon_team1_android
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.hackathon_team1_android.dao.BaseResponse
 import com.example.hackathon_team1_android.dao.CategorizeView
+import com.example.hackathon_team1_android.dao.RestaurantInfo
+import com.example.hackathon_team1_android.dao.getRestaurantListResponse
 import com.example.hackathon_team1_android.dao.getRestaurantService
 import com.example.hackathon_team1_android.databinding.ActivityMainBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.lang.Thread.sleep
 
 class MainActivity : AppCompatActivity(), CategorizeView {
 
@@ -33,17 +41,21 @@ class MainActivity : AppCompatActivity(), CategorizeView {
 //        )
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         //바텀 네비게이션을 상단바에도 만들어주는 코드(지우는것이 나음)
+        val service = getRestaurantService()
+        service.setCategorizeView(this)
+        service.getCategory("oma", 1)
+
         navView.setupWithNavController(navController)
 
     }
 
-    override fun CategorizeSuccess() {
-        TODO("Not yet implemented")
+    override fun CategorizeSuccess(RestaurantInfo : RestaurantInfo) {
         //임시로 오버라이드 해놓은 것.
+        Log.d("test", RestaurantInfo.toString())
     }
 
     override fun CategorizeFailure(code: Int, msg: String) {
-        TODO("Not yet implemented")
         //임시로 오버라이드 해놓은 것.
+        Log.d("test2", code.toString())
     }
 }

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class getRestaurantListResponse(
     @SerializedName("restaurant_list") val restaurant_list : List<RestaurantInfo>,
-    @SerializedName("has_next") val has_next : Boolean,
+    @SerializedName("has_next") val has_next : Int,
     @SerializedName("cur_page") val cur_page : Int
 
 )

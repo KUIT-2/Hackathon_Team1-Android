@@ -11,6 +11,6 @@ interface RestaurantCategories {
     @GET("/restaurants/categories")
     fun getRestaurant(
         @Query("category") category: String,
-        @Query("pageId") pageId: String
+        @Query("pageId") pageId: Int
     ): Call<BaseResponse<getRestaurantListResponse>>
 }

@@ -18,7 +18,7 @@ class getRestaurantService {
         this.categorizeView = categorizeView
     }
 
-    fun getCategory(category: String, pageId: String) {
+    fun getCategory(category: String, pageId: Int) {
         //get방식은 query를 요구 -> 각각 따로 넣기
         CategoryService.getRestaurant(category, pageId).enqueue(object :
             Callback<BaseResponse<getRestaurantListResponse>> {
@@ -29,7 +29,7 @@ class getRestaurantService {
                 val resp = response.body()
                 Log.d("Categorize response", resp.toString())
                 when (resp!!.code) {
-                    1000 -> categorizeView.CategorizeSuccess()
+                    1000 -> categorizeView.CategorizeSuccess(resp.result.restaurant_list[0])
                     else -> categorizeView.CategorizeFailure(resp.code, resp.message)
                 }
             }

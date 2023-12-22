@@ -1,5 +1,7 @@
 package com.example.hackathon_team1_android.dao
 
+import java.io.Serializable
+
 data class RestaurantInfo(
     val restaurant_id: Int,
     val restaurant_name: String,
@@ -11,4 +13,4 @@ data class RestaurantInfo(
     val maximum_price: Int,
     val minimum_price: Int,
     val rate: Float
-)
+) : Serializable
